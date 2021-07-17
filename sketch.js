@@ -1,5 +1,5 @@
-let mobilenet;
-let video;
+const mobilenet;
+const video;
 
 function modelIsReady(){
 
@@ -7,7 +7,6 @@ function modelIsReady(){
 	mobilenet.predict(gotResults);
 
 }
-
 
 function gotResults(error, results){
 
@@ -21,7 +20,7 @@ function gotResults(error, results){
 		fill(0);
 		createDiv(`Label: ${results[0].label}`);
 		createDiv(`Confidence: ${nf(results[0].confidence, 0, 2)}`);
-
+		
 	}
 
 }
